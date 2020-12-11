@@ -1,0 +1,30 @@
+.experience {
+	text-align: left;
+	.grid {
+		padding: 1em 0;
+		display: grid;
+		grid-template-columns: 63% auto 35%;
+		mat-divider {
+			margin: 0 auto;
+		}
+		.link-wrapper {
+			margin-top: 1em;
+			label {
+				display: block;
+				margin-bottom: 0.25em;
+			}
+		}
+	}
+	.desktop-hidden .grid {
+		display: block;
+		text-align: center;
+		::ng-deep .mat-chip-list-wrapper {
+			justify-content: center;
+		}
+		.right p {
+			text-align: left;
+			width: 95%;
+			margin: 0 auto;
+		}
+	}
+}

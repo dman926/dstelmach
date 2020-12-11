@@ -1,0 +1,19 @@
+mat-toolbar {
+	display: flex;
+	a {
+		text-decoration: none;
+		color: white;
+		width: 50%;
+		@media screen and (max-width: 518px) {
+			h1 {
+				text-align: center;
+				.constrain-hidden {
+					display: none;
+				}
+			}
+		}
+	}
+	div.projects button {
+		border-left: 1px solid black;
+	}
+}

@@ -1,0 +1,53 @@
+<div *ngIf="loaded">
+	<div class="project" *ngFor="let project of projects" [id]="slugify(project.name)">
+		<div class="desktop-hidden">
+			<div class="grid">
+				<div class="left animate__fadeInLeft">
+					<h1>{{ project.name }}</h1>
+					<mat-chip *ngIf="project.experience" (click)="open(slugify(project.experience))">{{ project.experience }}</mat-chip>
+					<div class="link-wrapper">
+						<label *ngIf="project.links.length > 1">Relavent Links:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let link of project.links" (click)="link.isProject ? open(slugify(link.text)) : open(link.link, true)">{{ link.text }}</mat-chip>
+						</mat-chip-list>
+					</div>
+					<div class="link-wrapper">
+						<label>Relevant Skills:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let skill of project.skills">{{ skill }}</mat-chip>
+						</mat-chip-list>
+					</div>
+				</div>
+				<mat-divider [vertical]="true" class="mobile-hidden animate__fadeIn"></mat-divider>
+				<div class="right animate__fadeInRight">
+					<p>{{ project.description }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-hidden">
+			<div class="grid">
+				<div class="left animate__fadeInLeft">
+					<p>{{ project.description }}</p>
+				</div>
+				<mat-divider [vertical]="true" class="mobile-hidden animate__fadeIn"></mat-divider>
+				<div class="right animate__fadeInRight">
+					<h1>{{ project.name }}</h1>
+					<mat-chip *ngIf="project.experience" (click)="open(slugify(project.experience))">{{ project.experience }}</mat-chip>
+					<div class="link-wrapper">
+						<label *ngIf="project.links.length > 1">Relavent Links:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let link of project.links" (click)="link.isProject ? open(slugify(link.text)) : open(link.link, true)">{{ link.text }}</mat-chip>
+						</mat-chip-list>
+					</div>
+					<div class="link-wrapper">
+						<label>Relevant Skills:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let skill of project.skills">{{ skill }}</mat-chip>
+						</mat-chip-list>
+					</div>
+				</div>
+			</div>
+		</div>
+		<mat-divider class="animate__fadeIn"></mat-divider>
+	</div>
+</div>

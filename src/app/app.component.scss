@@ -1,0 +1,22 @@
+section#site-wrapper {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: stretch;
+	header,
+	footer {
+		flex: 0 1 auto;
+	}
+	section#main {
+		flex: 1 1 auto;
+		padding: 0 1em;
+		overflow-x: hidden;
+		overflow-y: auto;
+		margin-bottom: 1em;
+	}
+	@media screen and (max-width: 768px) {
+		section#main {
+			padding: 0;
+		}
+	}
+}

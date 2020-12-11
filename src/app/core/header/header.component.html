@@ -1,0 +1,11 @@
+<mat-toolbar>
+	<a [routerLink]="['/']">
+		<h1><span class="constrain-hidden">Dennis James </span>Stelmach</h1>
+	</a>
+	<span class="spacer"></span>
+	<div class="projects">
+		<button mat-button [routerLink]="['/projects']">Projects</button>
+		<button mat-button [routerLink]="['/experience']">Experience</button>
+		<button mat-button (click)="openResume()">Resume</button>
+	</div>
+</mat-toolbar>

@@ -1,0 +1,52 @@
+<div *ngIf="loaded">
+	<div class="experience" *ngFor="let experience of experiences" [id]="slugify(experience.business)">
+		<div class="desktop-hidden">
+			<div class="grid">
+				<div class="left animate__fadeInLeft">
+					<h1>{{ experience.business }}</h1>
+					<p>{{ experience.position }}<br />{{ experience.location }} | {{ experience.span }}</p>
+					<div class="link-wrapper">
+						<label>Project Link{{ (experience.links.length > 1) ? "s" : "" }}:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let link of experience.links" (click)="link.isProject ? open(slugify(link.text)) : open(link.link, true)">{{ link.text }}</mat-chip>
+						</mat-chip-list>
+					</div>
+					<div class="link-wrapper">
+						<label>Relevant Skills:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let skill of experience.skills">{{ skill }}</mat-chip>
+						</mat-chip-list>
+					</div>
+				</div>
+				<div class="right animate__fadeInRight">
+					<p>{{ experience.description }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-hidden">
+			<div class="grid">
+				<div class="left animate__fadeInLeft">
+					<p>{{ experience.description }}</p>
+				</div>
+				<mat-divider [vertical]="true" class="mobile-hidden animate__fadeIn"></mat-divider>
+				<div class="right animate__fadeInRight">
+					<h1>{{ experience.business }}</h1>
+					<p>{{ experience.position }}<br />{{ experience.location }} | {{ experience.span }}</p>
+					<div class="link-wrapper">
+						<label>Project Link{{ (experience.links.length > 1) ? "s" : "" }}:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let link of experience.links" (click)="link.isProject ? open(slugify(link.text)) : open(link.link, true)">{{ link.text }}</mat-chip>
+						</mat-chip-list>
+					</div>
+					<div class="link-wrapper">
+						<label>Relevant Skills:</label>
+						<mat-chip-list>
+							<mat-chip *ngFor="let skill of experience.skills">{{ skill }}</mat-chip>
+						</mat-chip-list>
+					</div>
+				</div>
+			</div>
+		</div>
+		<mat-divider class="animate__fadeIn"></mat-divider>
+	</div>
+</div>

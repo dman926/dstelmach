@@ -1,4 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+span.spacer {
+	flex-grow: 1;
+}
+
+.mobile-hidden {
+	display: inherit;
+}
+
+.desktop-hidden {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.mobile-hidden {
+		display: none;
+	}
+	.desktop-hidden {
+		display: inherit;
+	}
+}
+
+//Animations
+// Fade In
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.animate__fadeIn {
+	animation: fadeIn 1.25s ease-out;
+}
+
+// Fade In Left
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-50%, 0, 0);
+	}
+	25% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.animate__fadeInLeft {
+	animation: fadeInLeft 1.25s ease-out;
+}
+
+// Fade In Right
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translate3d(50%, 0, 0);
+	}
+	25% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.animate__fadeInRight {
+	animation: fadeInRight 1.25s ease-out;
+}

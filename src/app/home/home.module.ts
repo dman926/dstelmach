@@ -1,10 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 // Angular Material
 import { MatButtonModule } from '@angular/material/button';
@@ -16,20 +11,18 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { HeaderComponent } from './core/header/header.component';
-import { FooterComponent } from './core/footer/footer.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home/home.component';
+
+import { ExperienceModule } from '../experience/experience.module';
+import { ProjectsModule } from '../projects/projects.module';
+
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		HeaderComponent,
-		FooterComponent
-	],
+	declarations: [HomeComponent],
 	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		HttpClientModule,
+		CommonModule,
+		HomeRoutingModule,
 
 		// Angular Material
 		MatButtonModule,
@@ -39,9 +32,10 @@ import { FooterComponent } from './core/footer/footer.component';
 		MatIconModule,
 		MatProgressSpinnerModule,
 		MatToolbarModule,
-		MatTooltipModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+		MatTooltipModule,
+
+		ExperienceModule,
+		ProjectsModule
+	]
 })
-export class AppModule { }
+export class HomeModule { }
