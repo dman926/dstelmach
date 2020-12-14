@@ -1,4 +1,4 @@
-<div *ngIf="loaded">
+<div class="project-wrapper" *ngIf="loaded">
 	<div class="project" *ngFor="let project of projects" [id]="slugify(project.name)">
 		<div class="desktop-hidden">
 			<div class="grid">
@@ -50,4 +50,5 @@
 		</div>
 		<mat-divider class="animate__fadeIn"></mat-divider>
 	</div>
+	<div style="flex-grow: 1;"></div>
 </div>
