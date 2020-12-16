@@ -35,4 +35,9 @@
 			}
 		}
 	}
+	.end {
+		position: relative;
+		min-height: 20em;
+		flex-grow: 1;
+	}
 }
