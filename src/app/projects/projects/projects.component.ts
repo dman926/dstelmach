@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/core/data.service';
 import { Project } from 'src/app/models/project';
@@ -9,23 +9,38 @@ import { Project } from 'src/app/models/project';
 	templateUrl: './projects.component.html',
 	styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
+export class ProjectsComponent implements OnInit, AfterContentInit, OnDestroy {
 
 	public loaded: boolean;
 
 	public projects: Project[];
 	private projects$: Subscription;
 
-	constructor(private dataService: DataService, private router: Router) { }
+	constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
 	ngOnInit(): void {
 		this.loaded = false;
 		this.projects = [];
+	}
+
+	ngAfterContentInit(): void {
 		this.projects$ = this.dataService.getProjects().subscribe(res => {
 			if (res) {
 				this.projects = res.data;
 			}
-			this.loaded = true;
+			if (!this.loaded) {
+				this.loaded = true;
+				setTimeout(() => {
+					this.route.fragment.subscribe(fragment => {
+						if (fragment) {
+							const el = document.querySelector('#' + fragment);
+							if (el) {
+								el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+							}
+						}
+					});
+				}, 250);
+			}
 		});
 	}
 

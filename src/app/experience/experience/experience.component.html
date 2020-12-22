@@ -4,7 +4,7 @@
 			<div class="grid">
 				<div class="left animate__fadeInLeft">
 					<h1>{{ experience.business }}</h1>
-					<p>{{ experience.position }}<br />{{ experience.location }} | {{ experience.span }}</p>
+					<p>{{ experience.position + (experience.time == '' ? '' : ' | ' + experience.time) }}<br />{{ experience.location + (experience.span == '' ? '' : ' | ' + experience.span) }}</p>
 					<div class="link-wrapper">
 						<label>Project Link{{ (experience.links.length > 1) ? "s" : "" }}:</label>
 						<mat-chip-list>
@@ -31,7 +31,7 @@
 				<mat-divider [vertical]="true" class="mobile-hidden animate__fadeIn"></mat-divider>
 				<div class="right animate__fadeInRight">
 					<h1>{{ experience.business }}</h1>
-					<p>{{ experience.position }}<br />{{ experience.location }} | {{ experience.span }}</p>
+					<p>{{ experience.position + (experience.time == '' ? '' : ' | ' + experience.time) }}<br />{{ experience.location + (experience.span == '' ? '' : ' | ' + experience.span) }}</p>
 					<div class="link-wrapper">
 						<label>Project Link{{ (experience.links.length > 1) ? "s" : "" }}:</label>
 						<mat-chip-list>

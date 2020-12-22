@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/core/data.service';
 import { Experience } from 'src/app/models/experience';
@@ -9,23 +9,38 @@ import { Experience } from 'src/app/models/experience';
 	templateUrl: './experience.component.html',
 	styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit, OnDestroy {
+export class ExperienceComponent implements OnInit, AfterContentInit, OnDestroy {
 
 	public loaded: boolean;
 
 	public experiences: Experience[];
 	private experiences$: Subscription;
 
-	constructor(private dataService: DataService, private router: Router) { }
+	constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
 	ngOnInit(): void {
 		this.loaded = false;
 		this.experiences = [];
+	}
+
+	ngAfterContentInit(): void {
 		this.experiences$ = this.dataService.getExperiences().subscribe(res => {
 			if (res) {
 				this.experiences = res.data;
 			}
-			this.loaded = true;
+			if (!this.loaded) {
+				this.loaded = true;
+				setTimeout(() => {
+					this.route.fragment.subscribe(fragment => {
+						if (fragment) {
+							const el = document.querySelector('#' + fragment);
+							if (el) {
+								el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+							}
+						}
+					});
+				}, 250);
+			}
 		});
 	}
 

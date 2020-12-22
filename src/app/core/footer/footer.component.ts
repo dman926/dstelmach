@@ -3,9 +3,9 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+	selector: 'app-footer',
+	templateUrl: './footer.component.html',
+	styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
 
@@ -15,11 +15,11 @@ export class FooterComponent implements OnInit {
 			sanitizer.bypassSecurityTrustResourceUrl('assets/li.svg'));
 	}
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
-  public open(url: string): void {
-	document.location.href = url;
-}
+	public open(url: string): void {
+		document.location.href = url;
+	}
 
 }

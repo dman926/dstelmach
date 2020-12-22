@@ -4,11 +4,14 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { Experience } from '../models/experience';
 import { Project } from '../models/project';
 import { Token } from '../models/token';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class DataService {
+
+	private expiryTime = 1; // Time to expire in days
 
 	public experiences$: Observable<Token<Experience[]>>;
 	public projects$: Observable<Token<Project[]>>;
@@ -20,6 +23,28 @@ export class DataService {
 		this.experiences$ = this.experiencesSubject.asObservable();
 		this.projectsSubject = new BehaviorSubject<Token<Project[]>>(JSON.parse(localStorage.getItem('projects')));
 		this.projects$ = this.projectsSubject.asObservable();
+		// If not production, then the current cache is destroyed on refresh, but persists during routerLink navigation.
+		if (!environment.production) {
+			localStorage.removeItem('experiences');
+			localStorage.removeItem('projects');
+		}
+		// Delete the cache if it is expired, then prepare it for viewing.
+		this.getExperiences().subscribe(res => {
+			if (res) {
+				if (new Date() > new Date(res.expires)) {
+					localStorage.removeItem('experiences');
+				}
+			}
+			this.getExperiences();
+		});
+		this.getProjects().subscribe(res => {
+			if (res) {
+				if (new Date() > new Date(res.expires)) {
+					localStorage.removeItem('projects');
+				}
+			}
+			this.getProjects();
+		});
 	}
 
 	public getExperiences(): Observable<Token<Experience[]>> {
@@ -28,7 +53,7 @@ export class DataService {
 			this.httpClient.get<Experience[]>('../assets/experiences.json').toPromise().then(res => {
 				if (res) {
 					const currentTime = new Date();
-					currentTime.setDate(currentTime.getDate() + 1);
+					currentTime.setDate(currentTime.getDate() + this.expiryTime);
 					const newToken: Token<Experience[]> = {
 						expires: currentTime,
 						data: res as Experience[]
@@ -50,7 +75,7 @@ export class DataService {
 			this.httpClient.get<Project[]>('../assets/projects.json').toPromise().then(res => {
 				if (res) {
 					const currentTime = new Date();
-					currentTime.setDate(currentTime.getDate() + 1);
+					currentTime.setDate(currentTime.getDate() + this.expiryTime);
 					const newToken: Token<Project[]> = {
 						expires: currentTime,
 						data: res as Project[]
