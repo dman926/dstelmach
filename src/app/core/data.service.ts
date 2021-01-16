@@ -11,10 +11,11 @@ import { environment } from 'src/environments/environment';
 })
 export class DataService {
 
-	private expiryTime = 1; // Time to expire in days
-
 	public experiences$: Observable<Token<Experience[]>>;
 	public projects$: Observable<Token<Project[]>>;
+
+	private expiryTime = 1; // Time to expire in days
+
 	private experiencesSubject: BehaviorSubject<Token<Experience[]>>;
 	private projectsSubject: BehaviorSubject<Token<Project[]>>;
 
