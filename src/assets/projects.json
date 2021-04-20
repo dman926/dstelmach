@@ -1,0 +1,144 @@
+[
+	{
+		"name": "DSTELMACH.COM",
+		"description": "This website! Built with Angular and Angular Material.",
+		"links": [
+			{
+				"text": "View on GitHub",
+				"link": "https://github.com/dman926/dstelmach"
+			}
+		],
+		"skills": [
+			"Angular",
+			"Angular Material",
+			"Material Design",
+			"HTML",
+			"CSS",
+			"TypeScript"
+		]
+	},
+	{
+		"hasPage": true,
+		"name": "WhyMow",
+		"description": "SUMMER 2019 - This was a summer internship. We used Angular and Angular Material for the front-end and Firebase for the back-end to create WhyMow.com. I focused on the Firebase back-end as well as front-end functionality for app.WhyMow.com.",
+		"experience": "John J. Rice",
+		"links": [
+			{
+				"text": "WhyMow.com",
+				"link": "http://whymow.com/"
+			}
+		],
+		"skills": [
+			"Angular",
+			"HTML",
+			"CSS",
+			"TypeScript",
+			"FireBase",
+			"Git"
+		]
+	},
+	{
+		"hasPage": true,
+		"name": "Reddit Entrepreneur",
+		"description": "SUMMER 2020 - A wrapper site for the r/Entrepreneur subreddit. Built using Angular for the front end with a Flask api and MySQL database. Features include posting, viewing, and voting on Reddit content, as well as newsletter emailing and subreddit moderators being able to post messages directly to redditentrepreneur.com with it's own comment solution.",
+		"experience": "Fisher Tech Solutions",
+		"links": [
+			{
+				"text": "RedditEntrepreneur.com",
+				"link": "https://redditentrepreneur.com/"
+			}
+		],
+		"skills": [
+			"Angular",
+			"Angular Material",
+			"HTML",
+			"CSS",
+			"TypeScript",
+			"Python",
+			"Flask",
+			"MySQL",
+			"Git"
+		]
+	},
+	{
+		"hasPage": false,
+		"name": "Hardwired",
+		"description": "FALL 2020 - Hardwired is a visual novel made with Ren'Py. It features a linear story with multiple small path differences. Hardwired was made with a four-person team consisting of a writer, an artist, a sound designer, and me as the programmer. I designed and created any text effects and all of the physically based animations using Ren'Py's Animation and Transformation Language.",
+		"experience": "Worcester Polytechnic Institute",
+		"links": [
+			{
+				"text": "View on GitHub",
+				"link": "https://github.com/Rice-Bowl-Studios/IMGD1001VN"
+			}
+		],
+		"skills": [
+			"Python",
+			"Ren'Py",
+			"Git",
+			"Video Game Development"
+		]
+	},
+	{
+		"hasPage": false,
+		"name": "Dragonfly",
+		"description": "FALL 2020 - Dragonfly is a 2D C++ engine that uses ASCII art for it's graphics. This engine was made over the span of three weeks for my IMGD 3000 class at Worcester Polytechnic Institute. This engine is fully featured and ready to be used to create games. It's a pretty basic engine, but it can be extended to use SFML's full capabilities.",
+		"experience": "Worcester Polytechnic Institute",
+		"links": [
+			{
+				"text": "View on GitHub",
+				"link": "https://github.com/dman926/dragonfly"
+			}
+		],
+		"skills": [
+			"C++",
+			"SFML",
+			"Git",
+			"Video Game Development",
+			"Graphical Programming"
+		]
+	},
+	{
+		"hasPage": false,
+		"name": "Escape the Abyss",
+		"description": "FALL 2020 - Escape the Abyss is a 2D C++ game that uses Dragonfly. The game consists of the player fighting their way out of a deep abyss, with randomly generated levels with hidden loading allowing for a virtually endless game.",
+		"experience": "Worcester Polytechnic Institute",
+		"links": [
+			{
+				"text": "View on GitHub",
+				"link": "https://github.com/PieKing1215/Escape-the-Abyss"
+			}
+		],
+		"skills": [
+			"C++",
+			"SFML",
+			"Git",
+			"Video Game Development",
+			"Graphical Programming"
+		]
+	},
+	{
+		"hasPage": false,
+		"name": "Angular and Flask API Starter",
+		"description": "WINTER 2021 - PRESENT - This repo served initially as a study session of the Flask Restful extension. The skeleton started small but soon grew to include password salting and hashing, file uploading and retrieving, async emailing, Stripe payments intent API integration, a Socket-IO server and demonstration, and a full stack shopping template to get me off my feet when I start a new web project.",
+		"experience": "",
+		"links": [
+			{
+				"text": "View on GitHub",
+				"link": "https://github.com/dman926/Flask-API"
+			}
+		],
+		"skills": [
+			"Angular",
+			"Angular Material",
+			"Python",
+			"Flask",
+			"MongoDB",
+			"REST",
+			"Authentication",
+			"Password Management",
+			"Stripe",
+			"Socket-IO",
+			"Full Stack Development"
+		]
+	}
+]

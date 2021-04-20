@@ -1,0 +1,135 @@
+[
+	{
+		"business": "Worcester Polytechnic Institute",
+		"location": "WORCESTER, MA",
+		"span": "2019 - 2023",
+		"position": "B.S. Computer Science + B.S. Interactive Media and Game Development in progress",
+		"time": "",
+		"links": [
+			{
+				"text": "See Classes",
+				"link": "../../assets/CS-IMGD_tracking_sheet.pdf",
+				"isProject": false
+			},
+			{
+				"text": "Hardwired",
+				"link": "",
+				"isProject": true
+			},
+			{
+				"text": "Dragonfly",
+				"link": "",
+				"isProject": true
+			},
+			{
+				"text": "Escape the Abyss",
+				"link": "",
+				"isProject": true
+			}
+		],
+		"skills": [
+			"C",
+			"C++",
+			"Java",
+			"Python",
+			"Assembly",
+			"Ren'Py",
+			"SFML",
+			"Git",
+			"Linux",
+			"Calculus"
+		],
+		"description": "Class of 2023. Majoring in Computer Science and Interactive Media and Game Development."
+	},
+	{
+		"business": "John J. Rice",
+		"location": "OXFORD, MA",
+		"span": "JUNE - AUGUST 2019",
+		"position": "Full-Stack Developer",
+		"time": "Internship",
+		"links": [
+			{
+				"text": "John's LinkedIn",
+				"link": "https://www.linkedin.com/in/johnjrice/",
+				"isProject": false
+			},
+			{
+				"text": "WhyMow",
+				"link": "http://whymow.com/",
+				"isProject": true
+			}
+		],
+		"skills": [
+			"Angular",
+			"Firebase",
+			"Git"
+		],
+		"description": "Worked with a team of interns to create WhyMow.com with Google’s Angular and Firebase. I learned a lot about web development from this internship. Before, I was making simple HTML and CSS pages with little to no JavaScript. John showed me how I can use TypeScript to better organize JavaScript and how to use a JavaScript framework with a \"serverless\" backend to power good-looking websites that are fast while still having fancy animations and large, single-page operations."
+	},
+	{
+		"business": "Fisher Tech Solutions",
+		"location": "REMOTE (HOLLAND, MA)",
+		"span": "JUNE 2020 - PRESENT",
+		"position": "Full-Stack Developer",
+		"time": "Contract -> Part Time",
+		"links": [
+			{
+				"text": "Fisher Tech Solutions",
+				"link": "https://fishertechsolutions.com/"
+			},
+			{
+				"text": "Journal of Antiques",
+				"link": "https://journalofantiques.com/"
+			},
+			{
+				"text": "White Mountain Process",
+				"link": "https://www.wmprocess.com/"
+			},
+			{
+				"text": "Here To There Wellness",
+				"link": "https://heretotherewellness.com"
+			},
+			{
+				"text": "Women in Business",
+				"link": "https://wibsturbridge.org"
+			},
+			{
+				"text": "Eye Sight CE",
+				"link": "https://eyesightce.com/"
+			},
+			{
+				"text": "Reddit Entrepreneur",
+				"link": "https://redditentrepreneur.com/",
+				"isProject": true
+			},
+			{
+				"text": "Handy Kline",
+				"link": "http://handykline.com/"
+			}
+		],
+		"skills": [
+			"WordPress",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"jQuery",
+			"AJAX",
+			"PHP",
+			"MySQL",
+			"NoSQL",
+			"Angular",
+			"Python",
+			"Flask",
+			"SSH",
+			"Apache",
+			"NGINX",
+			"Git",
+			"Selenium",
+			"Google Cloud",
+			"Firebase",
+			"Stripe Intents API",
+			"MongoDB"
+		],
+		"description": "Working with a team to create and maintain websites with WordPress, Angular, Flask, MySQL, and many other technologies for clients. My main job is to convert the clients ideas into code. I mostly work with WordPress as it gives the client an easy to use dashboard and simple page editing capabilities, but I have worked with Angular and Flask to create very specific pages that would have been much more complex if I had to make them with PHP in WordPress. In this position, I have learned a lot about CSS and the design of websites as well as how to efficiently store and retrieve data from relational and non-relational databases such as MySQL and MongoDB using REST APIs and server rendering."
+	}
+]

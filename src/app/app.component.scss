@@ -19,4 +19,7 @@ section#site-wrapper {
 			padding: 0;
 		}
 	}
+	@media screen and (max-height: 600px) {
+		footer {display: none;}
+	}
 }
